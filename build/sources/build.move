@@ -1,14 +1,15 @@
-/// Module: build
-module build::build;
+module build::build {
+    use sui::tx_context::TxContext;
+    use capability::capability::WorkshopCapability;
 
-// For Move coding conventions, see
-// https://docs.sui.io/concepts/sui-move-concepts/conventions
+    /// Dummy init fonksiyonu
+    fun init(ctx: &mut TxContext) {
+        let _ = ctx;
+    }
 
-fun init(ctx: &mut TxContext) {
-    let _ = ctx;
-}
-
-fun init_with_capability(ctx: &mut TxContext, capability: &mut Capability) {
-    let _ = ctx;
-    let _ = capability;
+    /// Capability parametresi alan fonksiyon
+    fun init_with_capability(ctx: &mut TxContext, capability: &mut WorkshopCapability) {
+        let _ = ctx;
+        let _ = capability;
+    }
 }
